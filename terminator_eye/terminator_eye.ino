@@ -21,6 +21,15 @@ void loop() {
   blink_light(3);
   delay(3000);
   fade_in();
+
+  for (int i = 0; i < 3; i++){
+    pixels.setPixelColor(0, pixels.Color(250, 0, 0)); 
+    pixels.show(); 
+    delay(10000); 
+    blink_light(2);
+  }
+  
+  
 }
 
 void fade_out() {
@@ -48,7 +57,7 @@ void fade_in() {
 void blink_light(int reps) {
   for (int i = 0; i < reps; i++)
   {
-    pixels.setPixelColor(0, pixels.Color(250, 0, 0));
+    pixels.setPixelColor(0, pixels.Color(150, 0, 0));
     pixels.show(); 
     delay(100); 
     pixels.setPixelColor(0, pixels.Color(0, 0, 0));
